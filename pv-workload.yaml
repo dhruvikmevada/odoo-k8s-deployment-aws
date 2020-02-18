@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: odoo-pv-volume
+  annotations:
+    volume.beta.kubernetes.io/storage-class: "aws-efs"
+spec:
+  # storageClassName: gp2
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteMany
+  # nfs:
+  #   server: fs-a454ea0e.efs.us-west-2.amazonaws.com
+  #   path: "/"
+  hostPath:
+    path: "/nfs"
+
+---
+#
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: odoo-pv-claim
+# spec:
+#   accessModes:
+#     - ReadWriteMany
+#   resources:
+#     requests:
+#       storage: 5Gi
+#   storageClassName: gp2
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: odoo-pv-claim
+  annotations:
+    volume.beta.kubernetes.io/storage-class: "aws-efs"
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
