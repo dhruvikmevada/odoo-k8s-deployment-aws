@@ -1,1 +1,1 @@
-# odoo-k8s-deployment-aws
+**Getting started with odoo framework deployment using Kubernetes on AWS**
