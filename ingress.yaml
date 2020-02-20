@@ -1,3 +1,5 @@
+# This step is not necessary 
+
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -7,7 +9,7 @@ metadata:
     nginx.ingress.kubernetes.io/secure-backends: "true"
 spec:
   rules:
-    - host: flectrahq.in
+    - host: odoo.example.com
       http:
         paths:
           - path: /
