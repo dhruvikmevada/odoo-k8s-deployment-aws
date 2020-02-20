@@ -10,7 +10,7 @@ spec:
   accessModes:
     - ReadWriteMany
   nfs:
-    server: fs-7ac742d0.efs.us-west-2.amazonaws.com
+    server: {efs.fs.id}.efs.{your.region}.amazonaws.com
     path: "/"
 ---
 
