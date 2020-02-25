@@ -1,4 +1,4 @@
-# This step is not necessary 
+# I'm testing the nginx-ingress for this deployment so better to ignore this step. More updates in upcoming commits.
 
 apiVersion: extensions/v1beta1
 kind: Ingress
